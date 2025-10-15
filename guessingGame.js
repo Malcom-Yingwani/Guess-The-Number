@@ -29,7 +29,7 @@ function startGame()
         }
         else if (isNaN(guess)) 
         {
-            alert("Please enter a number between 1-20");
+            alert("That won't do. Please enter a NUMBER (1-20)");
             getAnswer();
         }
         else if( guess > secret)
@@ -52,6 +52,7 @@ function startGame()
         };
         return;
 };
+
 
 
 
