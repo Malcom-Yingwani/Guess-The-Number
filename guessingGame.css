@@ -48,5 +48,33 @@
     0%, 50%, 100% {opacity: 1;}
     25%, 75% {opacity: 0;}
 }
+/* Mobile phones */
+@media (max-width: 600px) {
+    #gameLoop {
+        font-size: large; /* smaller text for mobile */
+        width: 95%;
+    }
+    #play {
+        font-size: 5vw;
+        padding: 3vw 6vw;
+    }
+    #gameIcon {
+        font-size: 40vw;
+        width: 70vw;
+        height: 70vw;
+    }
+}
+
+/* Larger desktops */
+@media (min-width: 1200px) {
+    #gameLoop {
+        font-size: xx-large;
+    }
+    #play {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+    }
+}
+
 
 
