@@ -34,8 +34,8 @@
     background-color: black;
     color:#fff;
     cursor: pointer;
-    padding: 2vw 5vw;
-    font-size: 4vw;
+    padding: 1vw 3vw;
+    font-size: 2vw;
     cursor: pointer;
     
 }
@@ -48,4 +48,5 @@
     0%, 50%, 100% {opacity: 1;}
     25%, 75% {opacity: 0;}
 }
+
 
