@@ -1,31 +1,46 @@
-var secret = Math.floor(Math.random() * 20) + 1;
+var secret = Math.floor(Math.random() * 20) + 1; 
+var response;
+var guess;
 
+document.getElementById("play").addEventListener("click", startGame);
 
-// Convert the string guess to an integer so that we can compare
-var guess = parseInt(prompt("Please guess the secret number (1-20)"));
+// function to prompt user repeatedly
+function getAnswer()
+{
+    response = (prompt("Please guess the secret number (1-20)"));
+    guess = parseInt(response);
+};
 
-
-  
+// executes game
+function startGame()
+{
+    
+   
+    getAnswer();
+    
 
         while ((guess !== secret))
 
     {
-        if (isNaN(guess)) 
+        if(response === null)
         {
             alert("Game cancelled.");
             break;
         }
-        
-       
-         else if( guess > secret)
+        else if (isNaN(guess)) 
+        {
+            alert("Please enter a number between 1-20");
+            getAnswer();
+        }
+        else if( guess > secret)
         {
             alert("Incorrect, too high");
-             guess = parseInt(prompt("Please guess the secret number (1-20)"));
+            getAnswer();
         }
         else if ( guess < secret)
         {
             alert("Incorrect, too low");
-             guess = parseInt(prompt("Please guess the secret number (1-20)"));
+            getAnswer();
         }
     };
         
@@ -35,5 +50,10 @@ var guess = parseInt(prompt("Please guess the secret number (1-20)"));
         {
             alert("Correct guess");
         };
+        return;
+};
+
+
+
 
 
